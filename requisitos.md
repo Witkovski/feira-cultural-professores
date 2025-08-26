@@ -23,7 +23,7 @@
 
 # [] Ao cadastrar um professor, a área deve ser sempre cadastrada com os caracteres em lower case.
 
-# [] Deve ser possível listar os professores cadastrados no sistema por disciplina.
+# [] FCP-02: Deve ser possível listar os professores cadastrados no sistema por disciplina.
 
 # [] Deve ser possível listar os professores cadastrados no sistema por aceite de orientação.
 

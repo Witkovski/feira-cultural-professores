@@ -19,6 +19,12 @@ class TeachersRepositoryInMemory {
         )
         return teachersFound
     }
+     findBySubject (disciplinas) {
+        const teachersFound = teachersTable.filter(
+            teacher => teacher.disciplinas.includes(disciplinas)
+        )
+        return teachersFound
+    }
 }
 
 module.exports = { TeachersRepositoryInMemory }

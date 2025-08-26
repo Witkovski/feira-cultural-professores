@@ -1,4 +1,5 @@
 const { startConnection, closeConnection } = require('../infra/database/mongodb')
+const teachers = require('../infra/models/teachers')
 const TeacherModel = require('../infra/models/teachers')
 
 class TeachersRepository {
@@ -27,6 +28,13 @@ class TeachersRepository {
         await closeConnection()
         console.log('findByArea::teacher:', teachers)
         return teachers
+    }
+    async findByDisciplina (disciplinas) {
+        await startConnection()
+        const teachers = await TeacherModel.find({ disciplinas })
+        await closeConnection()
+        console.log('findByDisciplinas::teacher:', teachers)   
+        return teachers 
     }
 }
 
